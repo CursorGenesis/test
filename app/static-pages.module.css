@@ -1,0 +1,106 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #E5E7EB;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #F5F5F5;
+}
+
+.section {
+    margin-bottom: 2rem;
+    background: rgba(26, 26, 26, 0.6);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(245, 158, 11, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #F5F5F5;
+    border-bottom: 2px solid #F59E0B;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.text {
+    line-height: 1.6;
+    color: #D1D5DB;
+    margin-bottom: 1rem;
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.listItem {
+    margin-bottom: 0.5rem;
+    color: #D1D5DB;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+}
+
+.contactCard:hover {
+    border-color: #F59E0B;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.contactLabel {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #9CA3AF;
+    font-size: 0.875rem;
+}
+
+.contactValue {
+    font-size: 1.125rem;
+    color: #F5F5F5;
+    font-weight: 500;
+}
+
+.faqItem {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.faqItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.question {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #F5F5F5;
+}
+
+.answer {
+    color: #D1D5DB;
+    line-height: 1.5;
+}

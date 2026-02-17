@@ -1,0 +1,275 @@
+/* ======= SIDEBAR ADS ======= */
+.sidebarAd {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: #1F2937;
+    z-index: 40;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
+}
+
+.sidebarAd.left {
+    left: 15px;
+}
+
+.sidebarAd.right {
+    right: 15px;
+}
+
+.sidebarAd:hover {
+    transform: translateY(-50%) scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sidebarImagePlaceholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #E5E7EB;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.sidebarImagePlaceholder:hover {
+    background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+}
+
+.sidebarImagePlaceholder span {
+    font-size: 0.85rem;
+    color: #9CA3AF;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.sidebarSize {
+    font-size: 0.7rem !important;
+    color: #6B7280 !important;
+}
+
+.sidebarInfo {
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.adLabel {
+    display: inline-block;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9CA3AF;
+    background: #F3F4F6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.buyBannerBtn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.buyBannerBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5);
+}
+
+.sidebarCTA {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.sidebarPhone {
+    display: block;
+    font-size: 0.7rem;
+    color: #F59E0B;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sidebarPhone:hover {
+    color: #D97706;
+}
+
+/* ======= POPUP AD ======= */
+.popupOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    will-change: opacity;
+    animation: fadeIn 0.2s ease;
+}
+
+.popupOverlay.closing {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.popupContent {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popupClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #F3F4F6;
+    border: none;
+    color: #6B7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.popupClose:hover {
+    background: #E5E7EB;
+    color: #1F2937;
+}
+
+.popupBadge {
+    display: inline-block;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.popupContent h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.popupContent p {
+    color: #6B7280;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.popupButton {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s;
+}
+
+.popupButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+}
+
+.popupDismiss {
+    background: none;
+    border: none;
+    color: #9CA3AF;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.popupDismiss:hover {
+    color: #6B7280;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 1400px) {
+    .sidebarAd {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .popupContent {
+        padding: 2rem 1.5rem;
+    }
+
+    .popupContent h3 {
+        font-size: 1.25rem;
+    }
+}
