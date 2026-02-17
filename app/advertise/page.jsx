@@ -14,7 +14,7 @@ import {
 
 export default function AdvertisePage() {
     const { user, addAdRequest } = useApp();
-    const { lang } = useLanguage();
+    const { t } = useLanguage();
     const router = useRouter();
 
     const [form, setForm] = useState({
